@@ -8,7 +8,7 @@
 </head>
 <body>
 	<jsp:include page="menubar.jsp" />
-	<h1 align="center">로그인 실패</h1>
-	<h3 align="center">아이디와 비밀번호를 확인해주세요</h3>
-</body>
+	<h2 align="center">회원가입 성공! 로그인 해주세요</h2><br>
+	<input type="button" onclick="location.href='../mybatis1/index.jsp'" value="홈페이지로 이동">
+ </body>
 </html>

@@ -1,6 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +19,6 @@
 		background-color: black;
 		color: white;
 		height: 50px;
-		
 	}
 	.menu {
 		display: table-cell;
@@ -48,7 +47,7 @@
 				</tr>
 				<tr>
 					<td colspan="3">
-						<a href="">회원가입</a>
+						<a href="enrollForm.me">회원가입</a>
 						<a href="">아이디/비밀번호 찾기</a>
 					</td>
 				</tr>
@@ -58,7 +57,7 @@
 		<c:otherwise>
 		 <table>
 			<tr>
-				<td colspan="2" class="loginInfo"><h4>${loginUser.userName }님 환영합니다</h4></td>
+				<td colspan="2" class="loginInfo"><h4>${loginUser.userName}님 환영합니다</h4></td>
 			</tr>
 			<tr>
 				<td><a href="">마이페이지</a></td>
@@ -69,8 +68,8 @@
 	</c:choose>
 	</div>
 	<br>
-	<div class="nav-area">
-		<div class="menu">HOME</div>
+	<div class="nav-area" align="center">
+ 		<div class="menu"><a style="text-decoration: none;" href="../mybatis1/index.jsp">HOME</a></div>
 		<div class="menu">공지사항</div>
 		<div onclick="" class="menu">게시판</div>
 		<div class="menu">ETC</div>

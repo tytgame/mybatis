@@ -12,9 +12,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    public LoginServlet() {
-    	
-    }
+    public LoginServlet() {}
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Member m = new Member();
@@ -22,16 +20,14 @@ public class LoginServlet extends HttpServlet {
 		m.setUserId(request.getParameter("userId"));
 		m.setUserPwd(request.getParameter("userPwd"));
 		
-//		MemberServiceImpl mi = new MemberServiceImpl();
 		Member loginUser = new MemberServiceImpl().loginMember(m);
-		
 
 		if(loginUser != null) {
 			request.getSession().setAttribute("loginUser", loginUser);
 			response.sendRedirect(request.getContextPath());
 		} else {
 			request.setAttribute("errorMsg", "로그인 실패");
-			request.getRequestDispatcher(LEGACY_DO_HEAD);
+			request.getRequestDispatcher("WEB-INF/views/common/errorPage.jsp").forward(request, response);
 		}
 	}
 
