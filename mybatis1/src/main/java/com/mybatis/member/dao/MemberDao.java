@@ -14,4 +14,9 @@ public class MemberDao {
 	public int checkId(SqlSession sqlSession, String userId) {
 		return sqlSession.selectOne("memberMapper.checkId", userId);	
 	}
+
+	public int insertMember(SqlSession sqlSession, Member m) {
+		// TODO Auto-generated method stub
+		return sqlSession.insert("memberMapper.insertMember", m);
+	}
 }

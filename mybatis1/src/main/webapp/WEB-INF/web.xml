@@ -59,4 +59,14 @@
     <servlet-name>enrollServlet</servlet-name>
     <url-pattern>/insert.me</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>boardServlet</display-name>
+    <servlet-name>boardServlet</servlet-name>
+    <servlet-class>com.mybatis.board.controller.boardServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>boardServlet</servlet-name>
+    <url-pattern>/list.bo</url-pattern>
+  </servlet-mapping>
 </web-app>

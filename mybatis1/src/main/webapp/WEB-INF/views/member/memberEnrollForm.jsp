@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>MemberEnrollForm</title>
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<!-- <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
 function findAddress() {
     new daum.Postcode({
@@ -14,8 +14,6 @@ function findAddress() {
            let roadAddress = data.roadAddress; // 도로명 주소
 		   let jibunAddress = data.jibunAddress; // 지번 주소
 		   let extraAddress = '';				// 동이나 빌딩명을 넣을 변수
-
-		   document.getElementById("postcode").value = data.zonecode; 	// 우편번호
 
 		   if(data.userSelectedType == 'R') {	// 사용자가 도로명주소를 선택함
 				if(data.bname != '') {
@@ -37,7 +35,7 @@ function findAddress() {
         }
     }).open();
 }
-</script>
+</script> -->
 </head>
 <body>
     <jsp:include page="../common/menubar.jsp"/>
@@ -63,6 +61,10 @@ function findAddress() {
                     <td><input type="email" name="email"></td>
                 </tr>
                 <tr>
+                    <td>Birthday</td>
+                    <td><input name="birthday"></td>
+                </tr>
+                <tr>
                     <td>GENDER</td>
                     <td><input type="radio" name="gender" value="M">남자</td>&ensp;
                     <td><input type="radio" name="gender" value="F">여자</td>
@@ -72,9 +74,9 @@ function findAddress() {
                 	<td><input name="phone"></td>
                 </tr>
                 <tr>
-                    <td>&ensp; ADDRESS</td>
+                    <td>ADDRESS</td>
                     <td>
-                        <input name="address" id="addr" onclick="findAddress();">
+                        <input name="address" id="addr">
                     </td>
                 </tr>
                 <tr>

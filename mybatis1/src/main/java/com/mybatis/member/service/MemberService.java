@@ -7,10 +7,5 @@ public interface MemberService {
 	
 	int checkID(String userId);
 	
-	// 회원가입
 	int insertMember(Member m);
-	
-	int updateMember(Member m);
-	
-	int deleteMember(String userId);
 }
